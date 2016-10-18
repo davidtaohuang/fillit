@@ -6,7 +6,7 @@
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/13 13:43:45 by ppatil            #+#    #+#             */
-/*   Updated: 2016/10/18 16:04:53 by ppatil           ###   ########.fr       */
+/*   Updated: 2016/10/18 16:51:48 by dhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ static int	read_file(int argc, char const **argv, char *buff)
 		write(1, "ERROR: Could not open file.\n", 28);
 		exit(EXIT_FAILURE);
 	}
-	ft_memset(buff, 0, 4096);
+	ft_memset(buff, 0, 4097);
 	rd = read(file, buff, 4096);
 	close(file);
 	if (rd < 20 || rd > 545 || rd % 21 != 20 || !errorcheck(buff, rd))
@@ -95,7 +95,7 @@ static int	nearestsquare_next(int n)
 int			main(int argc, char const **argv)
 {
 	t_tgrid	tg;
-	char	buff[4096];
+	char	buff[4097];
 	int		rd;
 
 	rd = read_file(argc, argv, buff);
