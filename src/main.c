@@ -6,7 +6,7 @@
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/13 13:43:45 by ppatil            #+#    #+#             */
-/*   Updated: 2016/10/13 13:43:45 by ppatil           ###   ########.fr       */
+/*   Updated: 2016/10/18 16:04:53 by ppatil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,6 @@ int			main(int argc, char const **argv)
 
 	rd = read_file(argc, argv, buff);
 	tg = tgrid_init();
-
 	tgrid_read_pieces(&tg, buff, rd / 21 + 1);
 	if (!tgrid_validate_pieces(&tg))
 	{
