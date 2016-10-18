@@ -100,7 +100,7 @@ int			main(int argc, char const **argv)
 
 	rd = read_file(argc, argv, buff);
 	tg = tgrid_init();
-	ft_memset(buff, 0, 4096);
+
 	tgrid_read_pieces(&tg, buff, rd / 21 + 1);
 	if (!tgrid_validate_pieces(&tg))
 	{
