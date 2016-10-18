@@ -35,7 +35,8 @@ SOURCE_FILES =	main.c \
 				tgrid_solve.c \
 				tgrid_unplace.c \
 				tgrid_validate_pieces.c \
-				tpc_parse.c
+				tpc_parse.c \
+				tgrid_init.c
 
 SOURCES =		$(patsubst %, $(SRC_DIR)/%, $(SOURCE_FILES))
 

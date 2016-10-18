@@ -99,7 +99,8 @@ int			main(int argc, char const **argv)
 	int		rd;
 
 	rd = read_file(argc, argv, buff);
-	tg = INL_TGRID_INIT;
+	tg = tgrid_init();
+	ft_memset(buff, 0, 4096);
 	tgrid_read_pieces(&tg, buff, rd / 21 + 1);
 	if (!tgrid_validate_pieces(&tg))
 	{
